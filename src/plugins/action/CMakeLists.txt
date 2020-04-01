@@ -1,6 +1,7 @@
 add_library(mavsdk_action
     action.cpp
     action_impl.cpp
+    action_operators.cpp
 )
 
 target_link_libraries(mavsdk_action
@@ -24,5 +25,6 @@ install(TARGETS mavsdk_action
 
 install(FILES
     include/plugins/action/action.h
+    include/plugins/action/action_operators.h
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/mavsdk/plugins/action
 )

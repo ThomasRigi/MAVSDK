@@ -8,7 +8,7 @@
  */
 struct {{ name.upper_camel_case }} {
     {% for field in fields -%}
-    {{ field.type_info.name }} {{ field.name.lower_snake_case }} /**< @brief{{ field.description.rstrip() }} */
+    {{ field.type_info.name }} {{ field.name.lower_snake_case }}; /**< @brief{{ field.description.rstrip() }} */
     {% endfor %}
 };
 {% endif %}

@@ -1,0 +1,12 @@
+{% if not name.upper_camel_case.endswith('Result') -%}
+bool operator==(const {{ plugin_name.upper_camel_case }}::{{ name.upper_camel_case }}& lhs, const {{ plugin_name.upper_camel_case }}::{{ name.upper_camel_case }}& rhs)
+{
+    return lhs == rhs;
+}
+
+std::ostream& operator<<(std::ostream& str, {{ plugin_name.upper_camel_case }}::{{ name.upper_camel_case }} const& {{ name.lower_snake_case }})
+{
+    // TODO
+    return str << {{ name.lower_snake_case }};
+}
+{% endif %}

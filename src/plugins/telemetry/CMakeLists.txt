@@ -1,6 +1,7 @@
 add_library(mavsdk_telemetry
     telemetry.cpp
     telemetry_impl.cpp
+    telemetry_operators.cpp
     math_conversions.cpp
 )
 
@@ -25,5 +26,6 @@ install(TARGETS mavsdk_telemetry
 
 install(FILES
     include/plugins/telemetry/telemetry.h
+    include/plugins/telemetry/telemetry_operators.h
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/mavsdk/plugins/telemetry
 )
